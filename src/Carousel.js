@@ -72,7 +72,7 @@ const Carousel = () => {
   }, {
     id: 6,
     animeName: "Goblin Slayer II",
-    description: "Second season of Goblin Slayer...",
+    description: "Goblins are often underestimated despite their ferocity, sly tactics, and rapid breeding. This disregard for their nefarious actions has allowed them to abduct females from rural communities for breeding purposes without consequence. Meanwhile, adventurers prioritize more lucrative quests, giving goblins a free pass...",
     img: goblinSlayer
   }
 ]
@@ -86,11 +86,11 @@ const Carousel = () => {
   )
 
   return (
-    <div className='max-w-9/10 mx-auto overflow-hidden' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div className='lg:max-w-9/10 mx-auto overflow-hidden' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
         <div id='inner' className='whitespace-nowrap transition-transform duration-700' style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
             {renderCarousel}
         </div>
-        <div className='flex absolute -mt-16 justify-start [&>button]:mx-1 [&>button]:bg-gray-400 [&>button]:rounded-full [&>button]:p-1.5 [&>button]:text-slate-50 [&>button.active]:bg-violet-500'> 
+        <div className='ml-[5%] flex absolute -mt-64 justify-start lg:-mt-16 lg:ml-0 [&>button]:mx-1 [&>button]:bg-gray-400 [&>button]:rounded-full [&>button]:p-1.5 [&>button]:text-slate-50 [&>button.active]:bg-violet-500'> 
             {renderButtons}
         </div>
     </div>
