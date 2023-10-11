@@ -87,12 +87,16 @@ const Carousel = () => {
 
   return (
     <div className='lg:max-w-9/10 mx-auto overflow-hidden' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+        <div className='ml-[5%] flex absolute mt-[51%] z-10 justify-start sm:mt-[53%] lg:hidden lg:-mt-16 lg:ml-0 [&>button]:mx-1 [&>button]:bg-gray-400 [&>button]:rounded-full [&>button]:p-1.5 [&>button]:text-slate-50 [&>button.active]:bg-violet-500'> 
+            {renderButtons}
+        </div>
         <div id='inner' className='whitespace-nowrap transition-transform duration-700' style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
             {renderCarousel}
         </div>
-        <div className='ml-[5%] flex absolute -mt-64 justify-start lg:-mt-16 lg:ml-0 [&>button]:mx-1 [&>button]:bg-gray-400 [&>button]:rounded-full [&>button]:p-1.5 [&>button]:text-slate-50 [&>button.active]:bg-violet-500'> 
+        <div className='hidden ml-[5%] absolute -mt-64 z-10 justify-start lg:flex lg:-mt-16 lg:ml-0 [&>button]:mx-1 [&>button]:bg-gray-400 [&>button]:rounded-full [&>button]:p-1.5 [&>button]:text-slate-50 [&>button.active]:bg-violet-500'> 
             {renderButtons}
         </div>
+        
     </div>
   )
 }
