@@ -40,12 +40,12 @@ const Carousel = () => {
   })
 
   const carouselData = [{
-    id: "0",
+    id: 0,
     animeName: "Reign Of The Seven Spellblades",
     description: "Impressed by Nanao Hibiya's skill with a sword, Kimberly Magic Academy instructor Theodore McFarlane saves the samurai from certain death amid a fierce battle. With his encouragement, Nanao enrolls in the academy, where she instantly becomes a celebr...",
     img: reign
   }, {
-    id: "1",
+    id: 1,
     animeName: "BOCCHI THE ROCK!",
     description: "Hitori Gotou, also known as Bocchi, longs to make friends and perform in a band. But she struggles with shyness and isolation, spending most of her time practicing the guitar, hoping for a chance to showcase her talents. One day, fate steps in as she meets Nijika Ijichi, a confident drummer who invites her to join Kessoku Band...",
     img: bocchi
@@ -86,7 +86,7 @@ const Carousel = () => {
   )
 
   return (
-    <div className='lg:max-w-9/10 mx-auto overflow-hidden' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div className='lg:max-w-9/10 mx-auto overflow-hidden lg:min-h-0' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
         <div className='ml-[5%] flex absolute mt-[51%] z-10 justify-start sm:mt-[53%] lg:hidden lg:-mt-16 lg:ml-0 [&>button]:mx-1 [&>button]:bg-gray-400 [&>button]:rounded-full [&>button]:p-1.5 [&>button]:text-slate-50 [&>button.active]:bg-violet-500'> 
             {renderButtons}
         </div>
