@@ -1,5 +1,6 @@
 A streaming site landing page clone built using Create React App and Tailwind CSS. Fully responsive design with seperate layouts for mobile and desktop devices.
 
 # Screenshots
-[![image.png](https://i.postimg.cc/QCtZYtdx/image.png)](https://postimg.cc/ygwGk7Rw)
-[![image.png](https://i.postimg.cc/Y08T1wNK/image.png)](https://postimg.cc/vxgPskS3)
+![image](https://github.com/user-attachments/assets/a6232fda-01ad-429b-9332-5b605cbca764)
+![image (1)](https://github.com/user-attachments/assets/60cd17e0-63d9-445a-9001-ce603bed69e4)
+
