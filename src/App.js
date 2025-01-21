@@ -334,7 +334,7 @@ function App() {
           <div className="flex gap-10 w-3/4">
             <img src={logo} alt="Logo" className="h-10 cursor-pointer" onClick={() => handleHomeClick()}/>
             <div className="w-7/12 2xl:w-5/12 relative">
-              <input id="search-bar" value={searchValue} type="text" placeholder="Search anime.." spellCheck="false" onInput={handleInputChange} onBlur={handleSearchFocusLoss} onFocus={handleSearchFocus} className="px-4 bg-zinc-800 h-full w-full focus:outline focus:outline-0 focus:outline-zinc-500 hidden sm:block"></input>
+              <input id="search-bar" value={searchValue} type="text" placeholder="Search anime.." spellCheck="false" autoComplete="one-time-code" onInput={handleInputChange} onBlur={handleSearchFocusLoss} onFocus={handleSearchFocus} className="px-4 bg-zinc-800 h-full w-full focus:outline focus:outline-0 focus:outline-zinc-500 hidden sm:block"></input>
               <div
                 className={`absolute w-full lg:w-[90%] xl:w-[80%] shadow-lg overflow-hidden ${
                   isDropdownVisible ? 'block h-auto' : 'hidden h-0'
