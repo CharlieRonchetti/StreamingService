@@ -7,17 +7,7 @@ const AnimePage = ({ animeData, handleAnimeClick }) => {
     const [episodeNum, setEpisodeNum] = useState(1);
 
   return (
-    <main className="max-w-9/10 mx-auto pt-[1.5rem]">
-        {/*
-        <div className="aspect-video max-h-[30rem] max-w-full">
-            <iframe className="w-full h-full"
-                src={`https://www.youtube.com/embed/${animeData.data.Media.trailer.id}`}
-                allowFullScreen
-                title="Youtube-Embed"
-            />
-        </div>
-        */}
-
+    <main className="max-w-9/10 mx-auto pt-[1.5rem] min-[2100px]:max-w-[80%] min-[2200px]:max-w-[70%] min-[2300px]:max-w-[60%] min-[3000px]:max-w-[45%]">
         <div className="2xl:grid 2xl:grid-cols-12 xl:grid xl:grid-cols-4">
             <div className="justify-items-center 2xl:max-h-[40rem] 2xl:col-span-7 2xl:grow xl:col-span-3 xl:flex xl:flex-col xl:max-h-[36rem]">
                 {animeData && animeData.data.Media.trailer ? (
