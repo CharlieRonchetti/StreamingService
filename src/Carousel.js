@@ -52,7 +52,7 @@ const Carousel = ({ apiData, handleAnimeClick }) => {
   )
 
   return (
-    <div className='lg:max-w-9/10 mx-auto overflow-hidden' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div className='lg:max-w-9/10 mx-auto overflow-hidden min-[2100px]:max-w-[80%] min-[2200px]:max-w-[70%] min-[2300px]:max-w-[60%] min-[3000px]:max-w-[45%]' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
         <div className='ml-[5%] flex absolute mt-[51%] z-10 justify-start sm:mt-[53%] lg:hidden lg:-mt-16 lg:ml-0 [&>button]:mx-1 [&>button]:bg-gray-400 [&>button]:rounded-full [&>button]:p-1.5 [&>button]:text-slate-50 [&>button.active]:bg-violet-500'> 
             {renderButtons}
         </div>

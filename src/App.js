@@ -330,7 +330,7 @@ function App() {
   return (
     <>
       <header className="bg-zinc-700 top-0 z-[16] sticky text-white">
-        <section className="max-w-9/10 py-4 mx-auto flex items-center justify-between">
+        <section className="max-w-9/10 py-4 mx-auto flex items-center justify-between min-[2100px]:max-w-[80%] min-[2200px]:max-w-[70%] min-[2300px]:max-w-[60%] min-[3000px]:max-w-[45%]">
           <div className="flex gap-10 w-3/4">
             <img src={logo} alt="Logo" className="h-10 cursor-pointer" onClick={() => handleHomeClick()}/>
             <div className="w-7/12 2xl:w-5/12 relative">
@@ -375,7 +375,7 @@ function App() {
           ) : (
             <p>Loading...</p>
           )}
-          <main className="flex flex-col max-w-9/10 mx-auto xl:flex-row xl:gap-4">
+          <main className="flex flex-col max-w-9/10 mx-auto xl:flex-row xl:gap-4 min-[2100px]:max-w-[80%] min-[2200px]:max-w-[70%] min-[2300px]:max-w-[60%] min-[3000px]:max-w-[45%]">
             <div className='w-full xl:hidden'>
               <h2 className="text-2xl text-slate-50 font-medium mb-4">Top Anime</h2>
               <div className="flex overflow-scroll gap-4">
