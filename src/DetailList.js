@@ -1,9 +1,17 @@
 import React from 'react'
 import DOMPurify from 'dompurify'
 
-const DetailList = ({ animeData }) => {
+const DetailList = ({ animeData, setSelectedAnime, setIsSearching, setSearchValue, setSearchResults, setCurrentSearchPage, searchValue }) => {
   const sanitizedDescription = DOMPurify.sanitize(animeData.description);
   const genres = animeData.genres;
+
+  const handleGenreClick = (genre) => {
+    setSearchValue(genre)
+    setSelectedAnime(null);
+    setIsSearching(true);
+    setSearchResults(null);
+    setCurrentSearchPage(1);
+  }
 
   return (
     <div className="flex gap-4 mt-[1rem] 2xl:pl-[1.5rem] 2xl:block 2xl:mt-0">
@@ -18,7 +26,7 @@ const DetailList = ({ animeData }) => {
           {genres.map((genre, index) => (
                   <div key={index} className={"flex justify-start max-w-fit"}>
                       <div className="rounded-full bg-zinc-800 px-2 text-sm">
-                          <p className={"p-2"}>{genre}</p>
+                          <p onClick={() => handleGenreClick(genre)} className={"p-2 hover:text-violet-400 cursor-pointer"}>{genre}</p>
                       </div> 
                   </div>
               ))}
@@ -28,7 +36,7 @@ const DetailList = ({ animeData }) => {
           {genres.map((genre, index) => (
                   <div key={index} className={"flex justify-start max-w-fit"}>
                       <div className="rounded-full bg-zinc-800 px-2 text-sm">
-                          <p className={"p-2"}>{genre}</p>
+                          <p onClick={() => handleGenreClick(genre)} className={"p-2 hover:text-violet-400 cursor-pointer"}>{genre}</p>
                       </div> 
                   </div>
               ))}
