@@ -3,7 +3,7 @@ import EpisodeList from './EpisodeList';
 import DetailList from './DetailList';
 import CharacterList from './CharacterList';
 
-const AnimePage = ({ animeData, handleAnimeClick }) => {
+const AnimePage = ({ animeData, handleAnimeClick, setSelectedAnime, setIsSearching, setSearchValue, setSearchResults, setCurrentSearchPage, searchValue }) => {
     const [episodeNum, setEpisodeNum] = useState(1);
 
   return (
@@ -19,7 +19,7 @@ const AnimePage = ({ animeData, handleAnimeClick }) => {
                         />
                     </div>
                 ) : (
-                    <p class="aspect-video w-full text-slate-50 flex justify-center items-center text-center text-4xl">Trailer not found</p>
+                    <p className="aspect-video w-full text-slate-50 flex justify-center items-center text-center text-4xl">Trailer not found</p>
                 )}
                 
                 <div className="w-full text-slate-50 flex items-center h-full justify-items-start text-center bg-zinc-900 p-2 pl-5 xl:rounded-br-xl">
@@ -41,6 +41,12 @@ const AnimePage = ({ animeData, handleAnimeClick }) => {
                 {animeData && animeData.data.Media ? (
                     <DetailList 
                         animeData={animeData.data.Media}
+                        setIsSearching={setIsSearching}
+                        setSearchValue={setSearchValue}
+                        setSelectedAnime={setSelectedAnime}
+                        setSearchResults={setSearchResults}
+                        setCurrentSearchPage={setCurrentSearchPage}
+                        searchValue={searchValue}
                     />
                 ) : (
                     <p>Loading...</p>
@@ -66,7 +72,7 @@ const AnimePage = ({ animeData, handleAnimeClick }) => {
                 animeData.data.Media.recommendations.edges.map((recommendation, index) => (
                     <div key={index} className='2xl:min-w-fit'>
                         <img className="h-[22rem] max-w-fit 2xl:max-w-0 2xl:min-w-full rounded-lg overflow-hidden object-cover cursor-pointer" src={recommendation.node.mediaRecommendation.coverImage.large} alt="Logo" onClick={() => handleAnimeClick(recommendation.node.mediaRecommendation.id)}/>
-                        <p className="text-gray-400 text-lg mb-6 line-clamp-2 pr-2 cursor-pointer" onClick={() => handleAnimeClick(recommendation.node.mediaRecommendation.id)}>{recommendation.node.mediaRecommendation.title.english ? recommendation.node.mediaRecommendation.title.english : recommendation.node.mediaRecommendation.title.romaji}</p>
+                        <p className="text-gray-300 hover:text-violet-400 font-medium text-lg mb-6 line-clamp-2 pr-2 cursor-pointer" onClick={() => handleAnimeClick(recommendation.node.mediaRecommendation.id)}>{recommendation.node.mediaRecommendation.title.english ? recommendation.node.mediaRecommendation.title.english : recommendation.node.mediaRecommendation.title.romaji}</p>
                     </div>
                 ))
             ) : (
