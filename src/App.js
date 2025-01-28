@@ -342,14 +342,15 @@ function App() {
   const handleHomeClick = () => {
     setSelectedAnime(null);
     setIsSearching(false);
+    setSearchValue("");
   } 
 
   const handleSearchEnter = (event) => {
     if(event.key === "Enter") {
+      setSearchResults(null);
       setSelectedAnime(null);
       setIsSearching(true);
       setIsDropdownVisible(false);
-      setSearchResults(null);
       setCurrentSearchPage(1);
     }
   }
@@ -518,7 +519,7 @@ function App() {
           </div>
         </section>
       </header>
-      {renderConditionalContent()};
+      {renderConditionalContent()}
     </>
   );
 }

@@ -6,10 +6,12 @@ const DetailList = ({ animeData, setSelectedAnime, setIsSearching, setSearchValu
   const genres = animeData.genres;
 
   const handleGenreClick = (genre) => {
+    if(searchValue !== genre) {
+      setSearchResults(null);
+    }
     setSearchValue(genre)
     setSelectedAnime(null);
     setIsSearching(true);
-    setSearchResults(null);
     setCurrentSearchPage(1);
   }
 
